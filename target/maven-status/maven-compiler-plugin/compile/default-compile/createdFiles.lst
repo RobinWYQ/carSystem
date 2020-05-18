@@ -1,0 +1,7 @@
+com\jkxy\car\api\controller\CarController.class
+com\jkxy\car\api\pojo\Car.class
+com\jkxy\car\api\service\CarService.class
+com\jkxy\car\api\CarApplication.class
+com\jkxy\car\api\utils\JSONResult.class
+com\jkxy\car\api\service\Impl\CarServiceImpl.class
+com\jkxy\car\api\dao\CarDao.class
