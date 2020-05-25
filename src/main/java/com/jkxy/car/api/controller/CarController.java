@@ -85,4 +85,15 @@ public class CarController {
         carService.insertCar(car);
         return JSONResult.ok();
     }
+
+    /**
+     * 通过id购买车辆
+     *
+     * @return
+     */
+    @PostMapping("buyCar/{id}")
+    public JSONResult buyCar(@PathVariable int id) {
+        String result = carService.buyCar(id);
+        return JSONResult.ok(result);
+    }
 }

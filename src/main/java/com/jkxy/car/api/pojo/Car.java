@@ -7,6 +7,16 @@ public class Car {
     private String carType;
     private String price;
     private String carSeries;
+    private int carNum;
+
+    public Car(int id, String carName, String carType, String price, String carSeries, int carNum) {
+        this.id = id;
+        this.carName = carName;
+        this.carType = carType;
+        this.price = price;
+        this.carSeries = carSeries;
+        this.carNum = carNum;
+    }
 
     public int getId() {
         return id;
@@ -46,6 +56,14 @@ public class Car {
 
     public void setCarSeries(String carSeries) {
         this.carSeries = carSeries;
+    }
+
+    public int getCarNum() {
+        return carNum;
+    }
+
+    public void setCarNum(int carNum) {
+        this.carNum = carNum;
     }
 
     @Override

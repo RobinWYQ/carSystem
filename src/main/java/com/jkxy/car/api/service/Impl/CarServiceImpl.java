@@ -43,4 +43,29 @@ public class CarServiceImpl implements CarService {
     public void insertCar(Car car) {
         carDao.insertCar(car);
     }
+
+    @Override
+    public String buyCar(int id) {
+        String result = "没有该车型";
+        Car searchCar = carDao.findById(id);
+        if (searchCar==null){
+            return result;
+        }
+        else{
+            String carName = searchCar.getCarName();
+            String carType = searchCar.getCarType();
+            String price = searchCar.getPrice();
+            String carSeries = searchCar.getCarSeries();
+            int carNum = searchCar.getCarNum();
+            if(carNum>=1){
+                carNum -= 1;
+                Car putCar =new Car(id, carName, carType, price, carSeries, carNum);
+                carDao.updateById(putCar);
+                result = "购买成功";
+            }else{
+                result = "库存不足,购买失败";
+            }
+        }
+        return result;
+    }
 }
